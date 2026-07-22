@@ -6,8 +6,9 @@
 
 /* Hero Section */
 .heroSection {
-  background: url('/hero-bg.jpg') no-repeat center center/cover;
-  background-attachment: fixed; /* Parallax effect */
+  /* For the parallax effect, place an image named hero-bg.jpg in the public directory */
+  background: #3498db url('/hero-bg.jpg') no-repeat center center/cover; /* Fallback color + Parallax effect */
+  background-attachment: fixed; 
   color: white;
   text-align: center;
   padding: 100px 20px;
