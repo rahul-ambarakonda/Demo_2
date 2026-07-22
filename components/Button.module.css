@@ -8,6 +8,11 @@
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
+.button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .primary {
   background-color: var(--color-primary);
   color: var(--color-text-inverse);
