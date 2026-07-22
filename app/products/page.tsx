@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductCard from '../../components/ProductCard';
 
 interface Product {
@@ -55,11 +55,60 @@ const mockProducts: Product[] = [
 ];
 
 const ProductsPage: React.FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        // Simulate an API call
+        await new Promise((resolve) => setTimeout(resolve, 1500)); // 1.5 seconds delay
+
+        // Simulate a successful fetch
+        setProducts(mockProducts);
+
+        // Simulate an error
+        // throw new Error('Failed to fetch products');
+
+      } catch (err: any) {
+        setError(err.message || 'An unknown error occurred');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="container mx-auto p-4 text-center">
+        <h1 className="text-3xl font-bold mb-6">Our Products</h1>
+        <p>Loading products...</p>
+        {/* A simple spinner could be added here */}
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mt-5"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="container mx-auto p-4 text-center text-red-600">
+        <h1 className="text-3xl font-bold mb-6">Our Products</h1>
+        <p>Error: {error}</p>
+        <p>Please try again later.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6">Our Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {mockProducts.map((product) => (
+        {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
