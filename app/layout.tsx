@@ -12,12 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body className={`${inter.className} flex flex-col min-h-screen font-sans`}> {/* Added font-sans */}
         <Header />
-        <main className="flex-grow p-4 md:p-8">
+        <main className="flex-grow p-md md:p-xl"> {/* Changed p-4 md:p-8 to p-md md:p-xl */}
           {children}
         </main>
-        <footer className="bg-gray-800 text-white p-4 text-center mt-8">
+        <footer className="bg-secondary text-text-inverse p-md text-center mt-xl"> {/* Changed bg-gray-800 to bg-secondary, text-white to text-text-inverse, p-4 to p-md, mt-8 to mt-xl */}
           <p>&copy; 2023 My Application</p>
         </footer>
       </body>
