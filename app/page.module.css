@@ -2,6 +2,7 @@
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  padding: 1rem; /* Default mobile padding */
 }
 
 /* Hero Section */
@@ -11,7 +12,7 @@
   background-attachment: fixed; 
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 60px 20px; /* Default mobile padding */
   position: relative;
   overflow: hidden;
 }
@@ -22,55 +23,54 @@
 }
 
 .heroTitle {
-  font-size: 3.5em;
-  margin-bottom: 20px;
+  font-size: 2.5em; /* Default mobile font size */
+  margin-bottom: 15px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .heroSubtitle {
-  font-size: 1.5em;
-  margin-bottom: 40px;
+  font-size: 1.2em; /* Default mobile font size */
+  margin-bottom: 30px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .callToAction {
   background-color: #007bff;
   color: white;
-  padding: 15px 30px;
+  padding: 12px 24px; /* Default mobile padding */
   border: none;
   border-radius: 5px;
-  font-size: 1.2em;
+  font-size: 1em; /* Default mobile font size */
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Features Section */
 .featuresSection {
-  padding: 60px 20px;
+  padding: 40px 20px; /* Default mobile padding */
   text-align: center;
   background-color: #f9f9f9;
 }
 
 .featuresTitle {
-  font-size: 2.5em;
-  margin-bottom: 50px;
+  font-size: 2em; /* Default mobile font size */
+  margin-bottom: 30px;
   color: #333;
 }
 
 .featureGrid {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  flex-direction: column; /* Mobile: column layout */
+  align-items: center;
+  gap: 20px; /* Default mobile gap */
 }
 
 .featureItem {
   background-color: white;
-  padding: 30px;
+  padding: 20px; /* Default mobile padding */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  min-width: 280px;
+  width: 90%; /* Adjust width for mobile */
   max-width: 350px;
   transition: transform 0.3s ease;
 }
@@ -80,13 +80,13 @@
 }
 
 .featureItem h3 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
+  font-size: 1.5em; /* Default mobile font size */
+  margin-bottom: 10px;
   color: #007bff;
 }
 
 .featureItem p {
-  font-size: 1.1em;
+  font-size: 1em; /* Default mobile font size */
   color: #555;
 }
 
@@ -95,12 +95,12 @@
   background-color: #0056b3;
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 50px 20px; /* Default mobile padding */
 }
 
 .ctaTitle {
-  font-size: 2.8em;
-  margin-bottom: 40px;
+  font-size: 2em; /* Default mobile font size */
+  margin-bottom: 30px;
 }
 
 /* Animations */
@@ -135,18 +135,99 @@
   transform: translateY(-3px);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .heroSection {
+    padding: 100px 40px;
+  }
+
   .heroTitle {
-    font-size: 2.5em;
+    font-size: 3.5em;
   }
 
   .heroSubtitle {
+    font-size: 1.5em;
+  }
+
+  .callToAction {
+    padding: 15px 30px;
     font-size: 1.2em;
   }
 
+  .featuresSection {
+    padding: 60px 40px;
+  }
+
+  .featuresTitle {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+  }
+
   .featureGrid {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Tablet and up: row layout */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .featureItem {
+    width: auto;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 30px;
+  }
+
+  .featureItem h3 {
+    font-size: 1.8em;
+  }
+
+  .featureItem p {
+    font-size: 1.1em;
+  }
+
+  .ctaSection {
+    padding: 80px 40px;
+  }
+
+  .ctaTitle {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+  }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .heroSection {
+    padding: 120px 0;
+  }
+
+  .heroTitle {
+    font-size: 4.5em;
+  }
+
+  .heroSubtitle {
+    font-size: 1.8em;
+  }
+
+  .featuresSection {
+    padding: 80px 0;
+  }
+
+  .ctaSection {
+    padding: 100px 0;
+  }
+
+  .ctaTitle {
+    font-size: 3.5em;
   }
 }
