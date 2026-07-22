@@ -20,7 +20,7 @@ export default function ProductDetailPage() {
     <div className="container mx-auto p-4">
       <button
         onClick={() => router.back()}
-        className="mb-4 px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
+        className="mb-4 px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
       >
         &larr; Back to Products
       </button>
