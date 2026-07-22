@@ -1,18 +1,17 @@
 .container {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family-sans);
   line-height: 1.6;
-  color: #333;
-  padding: 1rem; /* Default mobile padding */
+  color: var(--color-text-default);
+  padding: var(--spacing-md);
 }
 
 /* Hero Section */
 .heroSection {
-  /* For the parallax effect, place an image named hero-bg.jpg in the public directory */
-  background: #3498db url('/hero-bg.jpg') no-repeat center center/cover; /* Fallback color + Parallax effect */
-  background-attachment: fixed; 
-  color: white;
+  background: var(--color-primary) url('/hero-bg.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  color: var(--color-text-inverse);
   text-align: center;
-  padding: 60px 20px; /* Default mobile padding */
+  padding: var(--spacing-2xl) var(--spacing-md);
   position: relative;
   overflow: hidden;
 }
@@ -23,84 +22,84 @@
 }
 
 .heroTitle {
-  font-size: 2.5em; /* Default mobile font size */
-  margin-bottom: 15px;
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .heroSubtitle {
-  font-size: 1.2em; /* Default mobile font size */
-  margin-bottom: 30px;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2xl);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .callToAction {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 24px; /* Default mobile padding */
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: var(--spacing-sm) var(--spacing-lg);
   border: none;
-  border-radius: 5px;
-  font-size: 1em; /* Default mobile font size */
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-base);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Features Section */
 .featuresSection {
-  padding: 40px 20px; /* Default mobile padding */
+  padding: var(--spacing-xl) var(--spacing-md);
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #f5f5f5;
 }
 
 .featuresTitle {
-  font-size: 2em; /* Default mobile font size */
-  margin-bottom: 30px;
-  color: #333;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-2xl);
+  color: var(--color-text-default);
 }
 
 .featureGrid {
   display: flex;
-  flex-direction: column; /* Mobile: column layout */
+  flex-direction: column;
   align-items: center;
-  gap: 20px; /* Default mobile gap */
+  gap: var(--spacing-lg);
 }
 
 .featureItem {
-  background-color: white;
-  padding: 20px; /* Default mobile padding */
-  border-radius: 10px;
+  background-color: var(--color-text-inverse);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 90%; /* Adjust width for mobile */
+  width: 90%;
   max-width: 350px;
   transition: transform 0.3s ease;
 }
 
 .featureItem:hover {
-  transform: translateY(-10px);
+  transform: translateY(-var(--spacing-xs));
 }
 
 .featureItem h3 {
-  font-size: 1.5em; /* Default mobile font size */
-  margin-bottom: 10px;
-  color: #007bff;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
 }
 
 .featureItem p {
-  font-size: 1em; /* Default mobile font size */
-  color: #555;
+  font-size: var(--font-size-base);
+  color: var(--color-text-light);
 }
 
 /* CTA Section */
 .ctaSection {
-  background-color: #0056b3;
-  color: white;
+  background-color: var(--color-secondary);
+  color: var(--color-text-inverse);
   text-align: center;
-  padding: 50px 20px; /* Default mobile padding */
+  padding: var(--spacing-2xl) var(--spacing-md);
 }
 
 .ctaTitle {
-  font-size: 2em; /* Default mobile font size */
-  margin-bottom: 30px;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-2xl);
 }
 
 /* Animations */
@@ -114,7 +113,7 @@
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(var(--spacing-lg)); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -131,71 +130,71 @@
 }
 
 .hoverEffect:hover {
-  background-color: #0056b3;
-  transform: translateY(-3px);
+  background-color: color-mix(in srgb, var(--color-primary) 80%, black);
+  transform: translateY(-var(--spacing-xxs));
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .container {
-    padding: 2rem;
+    padding: var(--spacing-xl);
   }
 
   .heroSection {
-    padding: 100px 40px;
+    padding: var(--spacing-3xl) var(--spacing-xl);
   }
 
   .heroTitle {
-    font-size: 3.5em;
+    font-size: var(--font-size-4xl);
   }
 
   .heroSubtitle {
-    font-size: 1.5em;
+    font-size: var(--font-size-xl);
   }
 
   .callToAction {
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: var(--spacing-md) var(--spacing-2xl);
+    font-size: var(--font-size-lg);
   }
 
   .featuresSection {
-    padding: 60px 40px;
+    padding: var(--spacing-3xl) var(--spacing-xl);
   }
 
   .featuresTitle {
-    font-size: 2.5em;
-    margin-bottom: 50px;
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-2xl);
   }
 
   .featureGrid {
-    flex-direction: row; /* Tablet and up: row layout */
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: var(--spacing-xl);
   }
 
   .featureItem {
     width: auto;
     min-width: 280px;
     max-width: 350px;
-    padding: 30px;
+    padding: var(--spacing-xl);
   }
 
   .featureItem h3 {
-    font-size: 1.8em;
+    font-size: var(--font-size-2xl);
   }
 
   .featureItem p {
-    font-size: 1.1em;
+    font-size: var(--font-size-lg);
   }
 
   .ctaSection {
-    padding: 80px 40px;
+    padding: var(--spacing-3xl) var(--spacing-xl);
   }
 
   .ctaTitle {
-    font-size: 2.8em;
-    margin-bottom: 40px;
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-2xl);
   }
 }
 
@@ -204,30 +203,30 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: var(--spacing-xl) 0;
   }
 
   .heroSection {
-    padding: 120px 0;
+    padding: calc(var(--spacing-2xl) * 2.5) 0;
   }
 
   .heroTitle {
-    font-size: 4.5em;
+    font-size: var(--font-size-4xl);
   }
 
   .heroSubtitle {
-    font-size: 1.8em;
+    font-size: var(--font-size-2xl);
   }
 
   .featuresSection {
-    padding: 80px 0;
+    padding: calc(var(--spacing-2xl) * 2) 0;
   }
 
   .ctaSection {
-    padding: 100px 0;
+    padding: calc(var(--spacing-2xl) * 2 + var(--spacing-sm)) 0;
   }
 
   .ctaTitle {
-    font-size: 3.5em;
+    font-size: var(--font-size-4xl);
   }
 }
