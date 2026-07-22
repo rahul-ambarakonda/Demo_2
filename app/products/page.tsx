@@ -85,19 +85,19 @@ const ProductsPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="container mx-auto p-4 text-center">
-        <h1 className="text-3xl font-bold mb-6">Our Products</h1>
+      <div className="container mx-auto p-md md:p-xl text-center font-sans text-text-default"> {/* Added font-sans, text-text-default, and changed padding */}
+        <h1 className="text-3xl font-bold mb-lg">Our Products</h1> {/* Changed mb-6 to mb-lg */}
         <p>Loading products...</p>
         {/* A simple spinner could be added here */}
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mt-5"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mt-lg"></div> {/* Changed border-gray-900 to border-primary and mt-5 to mt-lg */}
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="container mx-auto p-4 text-center text-red-600">
-        <h1 className="text-3xl font-bold mb-6">Our Products</h1>
+      <div className="container mx-auto p-md md:p-xl text-center text-red-600 font-sans text-text-default"> {/* Added font-sans, text-text-default, and changed padding */}
+        <h1 className="text-3xl font-bold mb-lg">Our Products</h1> {/* Changed mb-6 to mb-lg */}
         <p>Error: {error}</p>
         <p>Please try again later.</p>
       </div>
@@ -105,9 +105,9 @@ const ProductsPage: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">Our Products</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="container mx-auto p-md md:p-xl font-sans text-text-default"> {/* Added font-sans, text-text-default, and changed padding */}
+      <h1 className="text-3xl font-bold mb-lg">Our Products</h1> {/* Changed mb-6 to mb-lg */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-xl"> {/* Changed gap-6 to gap-xl */}
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
