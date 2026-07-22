@@ -4,14 +4,30 @@
 This document provides an overview of the `Demo_2` project based on the currently available file tree and content.
 
 ## What this project does
-Based on the provided `README.md` content (`# Demo_2`), the specific purpose and functionality of this project are currently undefined. It appears to be a placeholder or an extremely early-stage project.
+This project is a basic Python application, initialized with `poetry`. Its primary function currently involves a simple "Hello, World!" program. The `README.md` provides further details on its specific purpose and instructions for setup and usage.
 
 ## Tech Stack and Architecture
-The tech stack and architecture for this project are currently unknown. There are no configuration files (e.g., `package.json`, `pom.xml`, `requirements.txt`), source code, or build scripts present in the provided file tree to infer the underlying technologies or architectural patterns.
+The core technologies and architectural components of this project include:
+*   **Language & Package Management**: Python 3.x, managed with `poetry`.
+*   **Containerization**: Docker, used for packaging and deployment.
+*   **Testing Framework**: `pytest` for writing and running unit tests.
+*   **Code Quality**: `pre-commit` hooks enforce standards, utilizing tools like Black for code formatting and Flake8 for linting.
+*   **CI/CD**: GitHub Actions automate testing, linting, and Docker image builds.
+*   **Configuration**: `.editorconfig` for maintaining consistent coding styles across the project.
 
 ## Key Directories and Their Purpose
-The provided file tree only contains a `README.md` file at the root. There are no additional directories to describe their purpose. Typically, one would expect directories such as `src/`, `tests/`, `docs/`, or `config/`.
+The project follows a standard structure with dedicated directories:
+*   `src/`: Contains the main application source code (e.g., `main.py`).
+*   `tests/`: Houses unit and integration tests (e.g., `test_main.py`).
+*   `docs/`: Stores project documentation, such as local setup guides (`local_run.md`).
+*   `.github/workflows/`: Defines GitHub Actions CI/CD workflows.
+Root-level files like `pyproject.toml`, `poetry.lock`, `Dockerfile`, `.pre-commit-config.yaml`, and `.editorconfig` configure the project, dependencies, and development environment.
 
 ## Important Conventions or Patterns
-With no source code, project structure, or configuration files, there are no discernible conventions or patterns to document at this time.
+Several conventions and patterns guide development in this project:
+*   **Code Quality**: Code is automatically formatted with Black and linted with Flake8 via `pre-commit` hooks before commits, complemented by `.editorconfig` for style consistency.
+*   **Testing**: Unit tests are mandatory and written using `pytest` in the `tests/` directory.
+*   **CI/CD**: Automated workflows via GitHub Actions ensure code quality, test execution, and Docker image builds on every push and pull request.
+*   **Documentation**: Essential operational documentation, including local run instructions, is maintained within the `docs/` directory.
+*   **Containerization**: The application is designed for containerized deployment using Docker.
 ```
