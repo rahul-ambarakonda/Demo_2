@@ -1,0 +1,151 @@
+.container {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.heroSection {
+  background: url('/hero-bg.jpg') no-repeat center center/cover;
+  background-attachment: fixed; /* Parallax effect */
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubtitle {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.callToAction {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Features Section */
+.featuresSection {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.featuresTitle {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.featureGrid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.featureItem {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.featureItem:hover {
+  transform: translateY(-10px);
+}
+
+.featureItem h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.featureItem p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* CTA Section */
+.ctaSection {
+  background-color: #0056b3;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.ctaTitle {
+  font-size: 2.8em;
+  margin-bottom: 40px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.delay1 {
+  animation-delay: 0.2s;
+}
+
+.delay2 {
+  animation-delay: 0.4s;
+}
+
+.hoverEffect:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5em;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2em;
+  }
+
+  .featureGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
